@@ -4,3 +4,13 @@
 n + nn + nnn, где n не перемножаются, а конкатенируются
 
 */
+
+const sum = n => {
+    if (n > 0 && n < 10){
+        const nn = Number(`${n}${n}`);     
+        const nnn = Number(`${n}${n}${n}`);
+        console.log(n + nn + nnn);
+    } 
+}
+
+sum (5);
