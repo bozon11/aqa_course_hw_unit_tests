@@ -6,14 +6,14 @@
 
 let evenNumbersResult = '';
 
-for (let i = 10; i >= 0; i--){
-    if(i % 2 == 0){
-        if(i !== 0){
-            evenNumbersResult += i + "-";
-        } else {
-            evenNumbersResult += i;
-        }
+for (let i = 10; i >= 0; i--) {
+  if (i % 2 == 0) {
+    if (i !== 0) {
+      evenNumbersResult += i + '-';
+    } else {
+      evenNumbersResult += i;
     }
+  }
 }
 
 console.log(evenNumbersResult);
@@ -31,18 +31,17 @@ console.log(evenNumbersResult);
 
 let smilePatternResult = '';
 
-for (let i = 0; i < 5; i++){
-    let smileLadder = '';
-    for (let j=0; j < i +1; j++){
-      smileLadder += ':)';
-    }
-    smilePatternResult += smileLadder;
-    if(i!==4){
-        smilePatternResult += "\n";
-    }
+for (let i = 0; i < 5; i++) {
+  let smileLadder = '';
+  for (let j = 0; j <= i; j++) {
+    smileLadder += ':)';
+  }
+  smilePatternResult += smileLadder;
+  if (i !== 4) {
+    smilePatternResult += '\n';
+  }
 }
 console.log(smilePatternResult);
-
 
 /**
  * Заменить все пробелы в переменной text на "1".
@@ -52,8 +51,7 @@ console.log(smilePatternResult);
 const text = 'Hello! I am a JS student!';
 let replaceSpacesWithOneResult = '';
 
-replaceSpacesWithOneResult = text.replaceAll(" ", 1);
+replaceSpacesWithOneResult = text.replaceAll(' ', 1);
 console.log(replaceSpacesWithOneResult);
-
 
 export { evenNumbersResult, smilePatternResult, replaceSpacesWithOneResult };
