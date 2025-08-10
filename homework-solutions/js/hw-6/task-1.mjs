@@ -9,14 +9,12 @@
 */
 const forOf = [];
 const arrNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-for (const arr of arrNumber) {
-  let result;
-  if (arr % 2 === 0) {
-    result = Math.pow(arr, 2);
+for (const num of arrNumber) {
+  if (num % 2 === 0) {
+    forOf.push(num ** 2);
   } else {
-    result = Math.pow(arr, 3);
+    forOf.push(num ** 3);
   }
-  forOf.push(result);
 }
 console.log(forOf);
 /*

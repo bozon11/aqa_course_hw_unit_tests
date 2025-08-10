@@ -7,11 +7,11 @@
   Присвойте результат в переменную "unique"
 */
 let unique = [];
-const number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 2, 4, 6, 8, 10, 1, 3, 5, 7, 9];
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 2, 4, 6, 8, 10, 1, 3, 5, 7, 9];
 
-for (const item of number) {
-  if (!unique.includes(item)) {
-    unique.push(item);
+for (const number of numbers) {
+  if (!unique.includes(number)) {
+    unique.push(number);
   }
 }
 console.log(unique);
