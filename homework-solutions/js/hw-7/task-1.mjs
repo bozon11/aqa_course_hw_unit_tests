@@ -45,9 +45,19 @@ console.log(a);
   */
 
 function fibonacci(n) {
-  return n < 1 ? 0 : n <= 2 ? 1 : fibonacci(n - 1) + fibonacci(n - 2);
+  if (typeof n !== 'number' || n < 0) {
+    return 'Incorrect data';
+  }
+  if (n === 0) return 0;
+  if (n === 1 || n === 2) return 1;
+  let prev = 1,
+    curr = 1;
+  for (let i = 3; i <= n; i++) {
+    [prev, curr] = [curr, prev + curr];
+  }
+  return curr;
 }
 
-console.log(fibonacci(2));
+console.log(fibonacci(8));
 
 export { mergeArrays, fibonacci, devideBy };
