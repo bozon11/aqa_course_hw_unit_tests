@@ -25,7 +25,7 @@
     "hw-11-2": "jest tests/js/hw-11/task-2.test.js",
     "hw-11-3": "jest tests/js/hw-11/task-3.test.js",
     "hw-5-set": "npm run hw-5-1 ; npm run hw-5-2 ; npm run hw-5-3",
-    "hw-6-set": "npm run hw-6-1 ; npm run hw-6-2 ; npm run hw-6-3",
+    "hw-6-set": "npm run hw-6-1 && npm run hw-6-2 && npm run hw-6-3",
     "hw-7-set": "npm run hw-7-1 ; npm run hw-7-2 ; npm run hw-7-3",
     "hw-8-set": "npm run hw-8-1 ; npm run hw-8-2 ; npm run hw-8-3",
     "hw-9-set": "npm run hw-9-1 ; npm run hw-9-2",
