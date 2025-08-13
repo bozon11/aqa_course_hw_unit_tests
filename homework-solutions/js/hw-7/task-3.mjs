@@ -9,7 +9,21 @@
 */
 
 function digitalRoot(number) {
-  // Ваш код
+  if (number < 10) {
+    return number;
+  } else {
+    let numbers = String(number).split('').map(Number);
+    let sum = 0;
+    for (const num of numbers) {
+      sum += num;
+    }
+    if (sum > 9) {
+      return digitalRoot(sum);
+    } else {
+      return sum;
+    }
+  }
 }
 
+digitalRoot(987654321);
 export { digitalRoot };
