@@ -13,14 +13,22 @@
   8. every - проверьте, что все элементы массива двухзначные //false
 */
 const numbers = [7, 8, 2, 30, 85, 95, 77, 94, 37, 31];
-
-let forEach;
-let map;
-let filter;
-let find;
-let sort;
-let reduce;
-let some;
-let every;
+//.forEach()
+let forEach = [];
+numbers.forEach((el) => !(el % 3) && forEach.push(el));
+//.map()
+let map = numbers.map((el) => el - numbers.length);
+// .filter()
+let filter = numbers.filter((el, i) => el > numbers[i - 1]);
+//.find ()
+let find = numbers.find((el) => el == numbers.indexOf(el));
+// .sort()
+let sort = numbers.sort((a, b) => a - b);
+// .reduce()
+let reduce = numbers.reduce((initial, current) => initial + current);
+// .some()
+let some = numbers.some((el) => el > 90);
+// .every()
+let every = numbers.every((el) => el > 9);
 
 export { forEach, map, filter, find, sort, reduce, some, every };
