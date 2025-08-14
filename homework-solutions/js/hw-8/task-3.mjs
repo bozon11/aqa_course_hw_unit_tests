@@ -7,7 +7,16 @@
 */
 
 function findMissingNumber(numbers) {
-  // Ваш код
+  const newArr = [...new Set(numbers)].toSorted((a, b) => a - b);
+
+  if (!numbers.length) return [];
+  if (newArr[0] > 1) return 1;
+
+  const foundElement = newArr.find((el, i) => i > 0 && el - newArr[i - 1] > 1);
+  return foundElement ? foundElement - 1 : newArr[newArr.length - 1] + 1;
 }
+
+const arr = [5, 2, 7, 3, 8, 1, 6];
+console.log(findMissingNumber(arr));
 
 export { findMissingNumber };
