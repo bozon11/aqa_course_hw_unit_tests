@@ -21,7 +21,7 @@ let map = numbers.map((el) => el - numbers.length);
 // .filter()
 let filter = numbers.filter((el, i) => el > numbers[i - 1]);
 //.find ()
-let find = numbers.find((el) => el == numbers.indexOf(el));
+let find = numbers.find((el, i) => el === i);
 // .sort()
 let sort = numbers.sort((a, b) => a - b);
 // .reduce()
