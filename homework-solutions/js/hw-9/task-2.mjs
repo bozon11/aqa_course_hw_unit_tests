@@ -13,24 +13,50 @@ const characters = [
   { name: 'Jack', age: 49 },
 ];
 
+//Add new object into array
+
 function addCharacter(character) {
-  // Ваш код
+  if (!character || !character.name || !character.age) {
+    throw new Error('invalid input!');
+  }
+  return characters.push(character);
 }
+
+//Get object by its name
 
 function getCharacter(name) {
-  // Ваш код
+  return characters.find((el) => el.name === name);
 }
+
+//Output array of objects with age >= minAge
 
 function getCharactersByAge(minAge) {
-  // Ваш код
+  if (typeof minAge !== 'number') {
+    throw new Error('invalid input!');
+  }
+  return characters.filter((el) => el.age >= minAge);
 }
+
+//Reuse method getCharacter() and update data by name
 
 function updateCharacter(name, newCharacter) {
-  // Ваш код
+  const character = getCharacter(name);
+  if (!character || !character.name || !character.age) {
+    throw new Error('invalid input!');
+  }
+  character.name = newCharacter.name;
+  character.age = newCharacter.age;
+  return characters;
 }
+// Remove character by his name using findIndex and splice()
 
 function removeCharacter(name) {
-  // Ваш код
+  const index = characters.findIndex((obj) => obj.name === name);
+  if (index === -1) {
+    throw new Error('The character is not found!');
+  }
+  return characters.splice(index, 1);
 }
+console.log(removeCharacter('Fred'));
 
 export { characters, addCharacter, updateCharacter, getCharacter, getCharactersByAge, removeCharacter };
