@@ -11,10 +11,10 @@ function delayTwoSeconds(callback) {
   setTimeout(callback, 2000);
 }
 
-const promise = new Promise((resolve) => resolve(1));
+const promise = new Promise((resolve, reject) => resolve(1));
 promise.then((result) => console.log(result));
 
-const promise1 = new Promise((reject) => reject('Promise failed'));
+const promise1 = new Promise((resolve, reject) => reject('Promise failed'));
 promise1.catch((error) => console.error(error));
 
 function promiseNumber(num) {
